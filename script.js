@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbylNvB720XgMyIF6n4eILazoKuALiaLVteGUZ72KvFOXvr0OoGX8ZDx8E7EL_HyqD_x/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycby2zIiOhd5_lk0oD1mDod6zGT2WFBA_AUAO4_4HVV4V_yi7ATDzdDYgYvdhEp1ALDR8/exec";
 
 // SHA-256 hashing
 async function hashPassword(password) {
@@ -56,4 +56,5 @@ function showLogin() {
   document.getElementById("form-title").innerText = "Login";
   document.getElementById("result").innerText = "";
 }
+
 
