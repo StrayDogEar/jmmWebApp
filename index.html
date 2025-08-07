@@ -6,15 +6,23 @@
 </head>
 <body>
   <div class="container">
-    <h2>Register</h2>
-    <input type="email" id="reg-email" placeholder="Email"><br>
-    <input type="password" id="reg-password" placeholder="Password"><br>
-    <button onclick="register()">Register</button>
+    <h2 id="form-title">Login</h2>
 
-    <h2 style="margin-top:30px;">Login</h2>
-    <input type="email" id="login-email" placeholder="Email"><br>
-    <input type="password" id="login-password" placeholder="Password"><br>
-    <button onclick="login()">Login</button>
+    <!-- Login Form -->
+    <div id="login-form">
+      <input type="email" id="login-email" placeholder="Email"><br>
+      <input type="password" id="login-password" placeholder="Password"><br>
+      <button onclick="login()">Login</button>
+      <p class="switch">Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+    </div>
+
+    <!-- Register Form -->
+    <div id="register-form" style="display: none;">
+      <input type="email" id="reg-email" placeholder="Email"><br>
+      <input type="password" id="reg-password" placeholder="Password"><br>
+      <button onclick="register()">Register</button>
+      <p class="switch">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
 
     <p id="result"></p>
   </div>
@@ -22,4 +30,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
