@@ -9,21 +9,30 @@ async function hashPassword(password) {
 }
 
 // REGISTER
-async function register() {
+function register() {
   const email = document.getElementById("reg-email").value;
   const password = document.getElementById("reg-password").value;
-  const hashed = await hashPassword(password);
 
-  fetch(scriptURL, {
+  const formData = new URLSearchParams();
+  formData.append("action", "register");
+  formData.append("email", email);
+  formData.append("password", password);
+
+  fetch("https://script.google.com/macros/s/AKfycby2zIiOhd5_lk0oD1mDod6zGT2WFBA_AUAO4_4HVV4V_yi7ATDzdDYgYvdhEp1ALDR8/exec", {
     method: "POST",
-    body: JSON.stringify({ action: "register", email, password: hashed }),
-    headers: { "Content-Type": "application/json" }
+    body: formData, // NOT JSON!
+    // ❌ Don't set headers manually — browser will default to safe type
   })
-    .then(res => res.text())
-    .then(txt => {
-      document.getElementById("result").innerText = txt;
-    });
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("result").innerText = data;
+  })
+  .catch(err => {
+    console.error("Error:", err);
+    document.getElementById("result").innerText = "Network error";
+  });
 }
+
 
 // LOGIN
 async function login() {
@@ -56,6 +65,7 @@ function showLogin() {
   document.getElementById("form-title").innerText = "Login";
   document.getElementById("result").innerText = "";
 }
+
 
 
 
