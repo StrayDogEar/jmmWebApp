@@ -7,7 +7,7 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
     message: document.getElementById("message").value
   };
 
-  fetch("YOUR_APPSCRIPT_WEBAPP_URL", {
+  fetch("https://script.google.com/macros/s/AKfycbylNvB720XgMyIF6n4eILazoKuALiaLVteGUZ72KvFOXvr0OoGX8ZDx8E7EL_HyqD_x/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json" }
@@ -16,3 +16,4 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
   .then(res => alert("Submitted: " + res))
   .catch(err => alert("Error: " + err));
 });
+
