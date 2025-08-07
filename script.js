@@ -1,4 +1,4 @@
-const scriptURL = "YOUR_APPSCRIPT_URL";
+const scriptURL = "https://script.google.com/macros/s/AKfycbylNvB720XgMyIF6n4eILazoKuALiaLVteGUZ72KvFOXvr0OoGX8ZDx8E7EL_HyqD_x/exec";
 
 // SHA-256 hashing
 async function hashPassword(password) {
@@ -56,3 +56,4 @@ function showLogin() {
   document.getElementById("form-title").innerText = "Login";
   document.getElementById("result").innerText = "";
 }
+
