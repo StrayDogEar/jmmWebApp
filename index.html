@@ -27,6 +27,15 @@
     <p id="result"></p>
   </div>
 
+  <form onsubmit="event.preventDefault(); login();">
+    <input type="email" id="login-email" required placeholder="Email">
+    <input type="password" id="login-password" required placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+  <div id="login-result"></div>
+
+
   <script src="script.js"></script>
 </body>
 </html>
+
