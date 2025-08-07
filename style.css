@@ -1,13 +1,15 @@
-/* Basic Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Dark background and text */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
+  background-color: #121212;
+  color: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,28 +17,34 @@ body {
   padding: 20px;
 }
 
+/* Form container */
 .container {
-  background: white;
+  background-color: #1e1e1e;
   padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
   max-width: 400px;
   width: 100%;
 }
 
+/* Titles */
 h2 {
   margin-bottom: 15px;
-  color: #333;
+  color: #ffffff;
 }
 
+/* Inputs */
 input {
   width: 100%;
   padding: 10px 12px;
   margin: 8px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #fff;
 }
 
+/* Buttons */
 button {
   width: 100%;
   padding: 10px;
@@ -54,20 +62,15 @@ button:hover {
   background-color: #0056b3;
 }
 
-#result {
-  margin-top: 15px;
-  text-align: center;
-  font-weight: bold;
-  color: #555;
-}
-
+/* Toggle Links */
 .switch {
   text-align: center;
   margin-top: 10px;
+  font-size: 0.9em;
 }
 
 .switch a {
-  color: #007bff;
+  color: #66aaff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -76,3 +79,10 @@ button:hover {
   text-decoration: underline;
 }
 
+/* Result message */
+#result {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #00c853;
+}
